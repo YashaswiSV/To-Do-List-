@@ -202,7 +202,7 @@ const App=()=>{
 export default App;
 */
 // =================================================================
-
+/*
 const subject=["php","oracle","java","css","html","react","python"];
 
 const App=()=>{
@@ -228,5 +228,162 @@ return(
 }
 export default App;
 
+*/
+// ======================================21 June==================================
+/*
+const student=[
+  {
+    rollno :121,
+    name:"Rama",
+    city:"Bhopal"
+  },
+  {
+    rollno :122,
+    name:"sanju",
+    city:"Indore"
+  },{
+    rollno :123,
+    name:"priya",
+    city:"Goa"
+  },
+  {
+    rollno :124,
+    name:"yuvi",
+    city:"gwalior"
+  }
+]
+
+const ans=student.map((key)=>{
+     return(
+      <>
+        
+          <tr>
+               <td>{key.rollno}  </td>
+               <td>{key.name}  </td>
+               <td>{key.city}  </td>
+
+          </tr>
+          
+      
+      </>
+     )
 
 
+
+
+})
+
+const App=()=>{
+  return (
+    <>
+    <h1>Table </h1>
+        <table border="2" width="500" bgcolor="pink">
+            <tr bgcolor="blue">
+              <th>Roll no</th>
+              <th>Name</th>
+              <th>City</th>
+
+            </tr>
+            {ans}
+        </table>
+    </>
+  )
+}
+export default App;
+*/
+
+// ==============================================================
+/*
+import EmployeeData from "./EmployeeData"
+
+const myans=EmployeeData.map((key)=>{
+           return(
+            <>
+                <tr>
+                  <th>{key.empno}</th>
+                  <th>{key.name}</th>
+                  <th>{key.salary}</th>
+                  <th>{key.city}</th>
+
+                </tr>
+            </>
+           )
+
+
+
+})
+
+const App=()=>{
+  return(
+    <>
+          <table  bgcolor="pink" width="500">
+                   <tr>
+                    <th>Employee no</th>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                    <th>City</th>
+
+
+                   </tr>
+                {myans}
+          </table>
+    
+    </>
+  )
+}
+export default App;
+*/
+
+// ==============================22 JUne=============================
+/*
+import Cybromnew from "./Cybromnew";
+import Studentnew from "./Studentnew";
+
+const ans=Studentnew.map((key)=><Cybromnew rn={key.Rollno} nm={key.Name} ct={key.City} fs={key.Fees}/>)
+
+
+const App=()=>{
+  return(
+    <>
+         <h1>Our Student list</h1>
+         <table border={2} width={500} bgcolor="pink" align="center">
+                <tr bgcolor="yellow">
+                  <th>RollNo.</th>
+                  <th>Name.</th>
+                  <th>City</th>
+                  <th>Fees</th>
+
+                </tr>
+                {ans}
+         </table>
+    </>
+  )
+}
+export default App;
+*/
+
+// =========================================================================
+
+const App=()=>{
+  return(
+    <>
+       {/* <h1 style={{color:"yellow" , fontFamily:"verdana"}}>Welcome to cybrome classes</h1>
+       <h1 style={{color:"pink" , fontFamily:"verdana" , fontSize:"50px"}}>Welcome to cybrome classes</h1> */}
+
+       <div style={{backgroundColor:"red", borderRadius:"20px" , width:"200px", height:"200px" }} >
+
+             <div style={{backgroundColor:"green" ,borderRadius:"20px" , width:"150px" , height:"150px", position:"relative", top:"20px", left:"20px",}}>
+
+                     <div style={{backgroundColor:"blue" ,borderRadius:"20px" , width:"100px",height:"100px", margin:"10px",position:"relative", top:"20px", left:"20px" }}>
+
+                      <div style={{position:"relative" ,top:"40px" ,left:"20px", fontSize:"20px"}}>Cybrom</div>
+                      
+                      </div>
+             </div>
+       </div>
+       
+
+    </>
+  )
+}
+export default App;
