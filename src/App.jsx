@@ -1,43 +1,35 @@
 
+// ===========================React Counter increment decerement reset==================================
 
-//=========================================1 July======================================================
+import { useState } from "react"
+const App=()=>{
+  const [cnt,setCnt]=useState(0);
+    
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Service from "./Service";
-import CompanyService from "./CompanyServices";
-import ProductService from "./ProductService";
-import SellsService from "./SellsService";
-import Layout from "./Layout";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import NoPage from "./NoPage";
+  const myInc=()=>{
+      setCnt(cnt+1)
 
-const  App=()=>{
+  }
+  const myDec=()=>{
+    setCnt(cnt-1)
+
+}
+   const myReset=()=>{
+  setCnt(0)
+
+}
   return(
     <>
-    <BrowserRouter>
-         <Routes>
-          <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path="/home" element={<Home/>}/>
-           <Route path="/about" element={<About/>}/>
-           <Route path="/contact" element={<Contact/>}/>
-           <Route path="*" element={<NoPage/>}/>
+        <center>
+          <h1>welcome to the counter app</h1>
+          <h2>My count : {cnt}</h2>
 
-           <Route path="service" element={<Service/>}>
-                 <Route path="companyservice" element={<CompanyService/>}/> 
-                 <Route path="productservice" element={<ProductService/>}/> 
-                 <Route path="sellsservice" element={<SellsService/>}/> 
+          <button onClick={myInc}>Increment</button>
+          <button onClick={myDec}>decrement</button>
+          <button onClick={myReset}>Reset</button>
 
-           </Route>
-
-           </Route>
-         </Routes>
-    
-    </BrowserRouter>
+        </center>
     </>
   )
 }
 export default App;
-
