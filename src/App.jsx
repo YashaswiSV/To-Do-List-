@@ -1,35 +1,65 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Table from 'react-bootstrap/Table';
 
-// ===========================React Counter increment decerement reset==================================
-
-import { useState } from "react"
 const App=()=>{
-  const [cnt,setCnt]=useState(0);
-    
-
-  const myInc=()=>{
-      setCnt(cnt+1)
-
+  const [mydata , setMydata]=useState([]);
+  const loadData=()=>{
+     let url="https://jsonplaceholder.typicode.com/todos";
+      axios.get(url).then((res)=>{
+        setMydata(res.data)
+        console.log(res.data);
+      })
   }
-  const myDec=()=>{
-    setCnt(cnt-1)
+  useEffect(()=>{0
+    loadData();
+  },[])
 
-}
-   const myReset=()=>{
-  setCnt(0)
+  let status="";
 
-}
-  return(
+  const ans = mydata.map((key)=>{
+    if(key.completed ==true){
+      status="TRUE";
+    }
+    else{
+      status="FALSE";
+    }
+ 
+   return(
     <>
-        <center>
-          <h1>welcome to the counter app</h1>
-          <h2>My count : {cnt}</h2>
-
-          <button onClick={myInc}>Increment</button>
-          <button onClick={myDec}>decrement</button>
-          <button onClick={myReset}>Reset</button>
-
-        </center>
+      <tr>
+        <td>{key.userId}</td>
+        <td>{key.id}</td>
+        <td>{key.title}</td>
+        <td>{status}</td>
+      </tr>
+    
     </>
-  )
+     )
+     })
+
+     return(
+      <>
+      <h1 style={{textAlign:"center"}}>Welcome</h1>
+
+      <Table striped bordered hover style={{width:'50rem' ,margin:"auto"}}>
+      <thead>
+        <tr>
+         <th>USER ID</th>
+         <th> ID</th>
+         <th>TITLE</th>
+         <th>COMPLETED</th>
+         </tr>
+         </thead>
+         <tbody>
+         {ans}
+         </tbody>
+         
+        
+       </Table>
+      
+      </>
+     )
+  
 }
 export default App;
