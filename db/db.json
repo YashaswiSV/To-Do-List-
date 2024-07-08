@@ -1,0 +1,28 @@
+{
+"student":[
+    {
+          "Rollno":1221,
+          "name":"Rama",
+          "city":"Indore",
+          "fees":34000
+    },
+    {
+        "Rollno":1222,
+        "name":"Priya",
+        "city":"Bhopal",
+        "fees":74000
+  },
+   {
+    "Rollno":1256,
+    "name":"Mehma",
+    "city":"Gwalior",
+    "fees":54000
+} ,
+{
+    "Rollno":1221,
+    "name":"Rita",
+    "city":"indore",
+    "fees":89000
+}
+]
+}
