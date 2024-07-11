@@ -1,124 +1,51 @@
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-// import Table from 'react-bootstrap/Table';
+// ==================================10 July  Insert and display================================
+import { BrowserRouter,Routes,Route } from "react-router-dom";
 
-// const App=()=>{
-//   const [mydata , setMydata]=useState([]);
-//   const loadData=()=>{
-//      let url="https://jsonplaceholder.typicode.com/todos";
-//       axios.get(url).then((res)=>{
-//         setMydata(res.data)
-//         console.log(res.data);
-//       })
-//   }
-//   useEffect(()=>{0
-//     loadData();
-//   },[])
+import Layout from "./Layout";
 
-//   let status="";
+import Insert from "./pages/Insert";
+import Display from "./pages/Display";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Update from "./pages/Update";
+import Search from "./pages/Search";
 
-//   const ans = mydata.map((key)=>{
-//     if(key.completed ==true){
-//       status="TRUE";
-//     }
-//     else{
-//       status="FALSE";
-//     }
- 
-//    return(
-//     <>
-//       <tr>
-//         <td>{key.userId}</td>
-//         <td>{key.id}</td>
-//         <td>{key.title}</td>
-//         <td>{status}</td>
-//       </tr>
-    
-//     </>
-//      )
-//      })
 
-//      return(
-//       <>
-//       <h1 style={{textAlign:"center"}}>Welcome</h1>
-
-//       <Table striped bordered hover style={{width:'50rem' ,margin:"auto"}}>
-//       <thead>
-//         <tr>
-//          <th>USER ID</th>
-//          <th> ID</th>
-//          <th>TITLE</th>
-//          <th>COMPLETED</th>
-//          </tr>
-//          </thead>
-//          <tbody>
-//          {ans}
-//          </tbody>
-         
-        
-//        </Table>
-      
-//       </>
-//      )
-  
-// }
-// export default App;
-
-// =====================================================================
-import { useState,useEffect } from "react";
-import axios from "axios";
-import Table from 'react-bootstrap/Table';
+// import Contact from "./pages/Contact";
 
 const App=()=>{
-  const[mydata ,setMydata]=useState([]);
-  const loadData=()=>{
-    let api=" http://localhost:3000/student";
-    axios.get(api).then((res)=>{
-      console.log(res.data);
-      setMydata(res.data);
-    });
-  
-  }
-
- const ans=mydata.map((key)=>{
-           return(
-            <>
-               <tr>
-                <td>{key.Rollno}</td>
-                <td>{key.name}</td>
-                <td>{key.city}</td>
-                <td>{key.fees}</td>
-               </tr>
-            
-            </>
-           )
- });
-
- useEffect(()=>{
-    loadData();
- },[])
-
-
-  return(
+  return (
     <>
-        <h1>Table </h1>
-        <Table striped bordered hover style={{width:'50rem' ,margin:"auto"}}>
-      <thead>
-        <tr>
-        <th>USER ID</th>
-        <th> ID</th>
-          <th>TITLE</th>
-          <th>COMPLETED</th>
-          </tr>
-          </thead>
-          <tbody>
-         {ans}
-         </tbody>
-         
-        
-        </Table>
+     <BrowserRouter>
+               <Routes>
+
+                     <Route path="/" element={<Layout/>}>
+                      <Route index element={<Home/>}/>
+                      <Route path="home" element={<Home/>}/>
+                     <Route path="insert" element={<Insert/>}/>
+                     <Route path="display" element={<Display/>}/>
+                     <Route path="search" element={<Search/>}/>
+                     <Route path="update" element={<Update/>}/>
+                     
+
+                     <Route path="contact" element={<Contact/>}/>
+
+
+                      
+
+
+
+                     </Route>
+
+
+                
+               </Routes>
+    
+     </BrowserRouter>
+      
 
     </>
   )
 }
 export default App;
+
