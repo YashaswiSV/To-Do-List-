@@ -28,13 +28,26 @@
       "fees": 89000,
       "id": "894d"
     },
-  
     {
       "id": "0f0a",
       "Rollno": "23",
       "name": "tina",
       "city": "gwalior",
       "fees": "89000"
+    },
+    {
+      "id": "382b",
+      "Rollno": "1",
+      "name": "aman",
+      "city": "agra",
+      "fees": "9900"
+    },
+    {
+      "id": "34c0",
+      "Rollno": "1",
+      "name": "yuvi",
+      "city": "goa",
+      "fees": "23450"
     }
   ]
 }
