@@ -2,38 +2,10 @@
   "student": [
     {
       "Rollno": 1221,
-      "name": "Rama",
-      "city": "Indore",
-      "fees": 34000,
-      "id": "6875"
-    },
-    {
-      "Rollno": 1222,
-      "name": "Priya",
-      "city": "Bhopal",
-      "fees": 74000,
-      "id": "7c61"
-    },
-    {
-      "Rollno": 1256,
-      "name": "Mehma",
-      "city": "Gwalior",
-      "fees": 54000,
-      "id": "e07d"
-    },
-    {
-      "Rollno": 1221,
-      "name": "Rita",
+      "name": "Rituuu",
       "city": "indore",
       "fees": 89000,
       "id": "894d"
-    },
-    {
-      "id": "0f0a",
-      "Rollno": "23",
-      "name": "tina",
-      "city": "gwalior",
-      "fees": "89000"
     },
     {
       "id": "382b",

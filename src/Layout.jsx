@@ -14,7 +14,9 @@ const Layout=()=>{
             <Nav.Link as={Link} to="insert">Insert</Nav.Link>
             <Nav.Link as={Link} to="display">Display</Nav.Link>
             <Nav.Link as={Link} to="search">Search</Nav.Link>
-            <Nav.Link as={Link} to="update">Update</Nav.Link>
+            {/* <Nav.Link as={Link} to="update">Update</Nav.Link> */}
+            <Nav.Link as={Link} to="updatenew">UpdateNew</Nav.Link>
+
             <Nav.Link as={Link} to="contact">Contact</Nav.Link>
 
 

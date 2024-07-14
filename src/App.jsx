@@ -7,8 +7,9 @@ import Insert from "./pages/Insert";
 import Display from "./pages/Display";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
-import Update from "./pages/Update";
+// import Update from "./pages/Update";
 import Search from "./pages/Search";
+import UpdateNew from "./pages/UpdateNew";
 
 
 // import Contact from "./pages/Contact";
@@ -25,7 +26,8 @@ const App=()=>{
                      <Route path="insert" element={<Insert/>}/>
                      <Route path="display" element={<Display/>}/>
                      <Route path="search" element={<Search/>}/>
-                     <Route path="update" element={<Update/>}/>
+                     {/* <Route path="update" element={<Update/>}/> */}
+                     <Route path="updatenew" element={<UpdateNew/>}/>
                      
 
                      <Route path="contact" element={<Contact/>}/>
