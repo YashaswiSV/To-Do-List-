@@ -1,53 +1,31 @@
-// ==================================10 July  Insert and display================================
-import { BrowserRouter,Routes,Route } from "react-router-dom";
+// ======================================18july======================================================
 
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-
-import Insert from "./pages/Insert";
-import Display from "./pages/Display";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-// import Update from "./pages/Update";
-import Search from "./pages/Search";
-import UpdateNew from "./pages/UpdateNew";
-
-
-// import Contact from "./pages/Contact";
+import Aboutnew from "./Aboutnew";
+import Homwnew from "./Homenew";
+import Contactnew from "./Contactnew";
 
 const App=()=>{
-  return (
+  return(
     <>
-     <BrowserRouter>
-               <Routes>
-
-                     <Route path="/" element={<Layout/>}>
-                      <Route index element={<Home/>}/>
-                      <Route path="home" element={<Home/>}/>
-                     <Route path="insert" element={<Insert/>}/>
-                     <Route path="display" element={<Display/>}/>
-                     <Route path="search" element={<Search/>}/>
-                     {/* <Route path="update" element={<Update/>}/> */}
-                     <Route path="updatenew" element={<UpdateNew/>}/>
-                     
-
-                     <Route path="contact" element={<Contact/>}/>
-
-
-                      
-
-
-
-                     </Route>
-
-
-                
-               </Routes>
-    
-     </BrowserRouter>
-      
-
+       <BrowserRouter>
+              <Routes>
+                  <Route path="/" element={<Layout/>}>
+                   <Route index element={<Homwnew/>}/>
+                   <Route path="/homenew" element={<Homwnew/>}/>
+                   <Route path="/aboutnew" element={<Aboutnew/>}/>
+                   <Route path="/contactnew" element={<Contactnew/>}/>
+            
+                  </Route>
+              </Routes>
+             
+       </BrowserRouter>
     </>
   )
 }
 export default App;
+
+
 
