@@ -1,31 +1,15 @@
-// ======================================18july======================================================
 
+import Comp1 from "./Comp1";
+import { useState } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-import Aboutnew from "./Aboutnew";
-import Homwnew from "./Homenew";
-import Contactnew from "./Contactnew";
-
-const App=()=>{
-  return(
+const App = () => {
+  const [user , setUser]=useState("shubhi")
+  return ( 
     <>
-       <BrowserRouter>
-              <Routes>
-                  <Route path="/" element={<Layout/>}>
-                   <Route index element={<Homwnew/>}/>
-                   <Route path="/homenew" element={<Homwnew/>}/>
-                   <Route path="/aboutnew" element={<Aboutnew/>}/>
-                   <Route path="/contactnew" element={<Contactnew/>}/>
-            
-                  </Route>
-              </Routes>
-             
-       </BrowserRouter>
+      <h1>welcom : {user}</h1>
+      <Comp1 user={user}/>
     </>
-  )
+   );
 }
+ 
 export default App;
-
-
-
