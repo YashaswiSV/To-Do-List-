@@ -1,13 +1,17 @@
+import AuthUser from "./AuthUser";
+import UnauthUser from "./UnauthUser";
 
-import Comp1 from "./Comp1";
-import { useState } from "react";
+import { useContext } from "react";
+import { myloginContext } from "./LoginContext";
+
 
 const App = () => {
-  const [user , setUser]=useState("shubhi")
+
+  const {user} =useContext(myloginContext)
   return ( 
     <>
-      <h1>welcom : {user}</h1>
-      <Comp1 user={user}/>
+        <h1>this is  login system</h1>
+        {user.auth ? <AuthUser/> : <UnauthUser/>}
     </>
    );
 }
