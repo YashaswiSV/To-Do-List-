@@ -1,19 +1,21 @@
-import AuthUser from "./AuthUser";
-import UnauthUser from "./UnauthUser";
-
-import { useContext } from "react";
-import { myloginContext } from "./LoginContext";
-
+import { useSelector,useDispatch } from "react-redux";
+import { changeColor } from "./Colorslice";
+import { useState } from "react";
 
 const App = () => {
-
-  const {user} =useContext(myloginContext)
-  return ( 
-    <>
-        <h1>this is  login system</h1>
-        {user.auth ? <AuthUser/> : <UnauthUser/>}
-    </>
-   );
+   const [clr, setClr] = useState("");
+  
+   const myclr=useSelector((state)=>state.mycolor.bgcolor);
+   const mydis=useDispatch();
+    return ( 
+        <>
+           <h1>My color App by Redux ToolKit</h1>
+         
+           Enter Color : <input type="text" value={clr} onChange={(e)=>{setClr(e.target.value)}} />
+           <button onClick={()=>mydis(changeColor(clr))}>ChangeColor</button>
+           <div style={{width:"300px" , height:"300px", backgroundColor:myclr}}></div>
+        </>
+     );
 }
  
 export default App;

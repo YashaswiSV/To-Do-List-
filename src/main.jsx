@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './Css/style.css';
-import LoginContext from './LoginContext.jsx';
+import Store from './Store.jsx';
+import { Provider } from 'react-redux';
+
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<LoginContext>
+<Provider store={Store}>
 <App />
-</LoginContext>
+</Provider>
+
 )
